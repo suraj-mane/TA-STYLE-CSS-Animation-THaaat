@@ -1,0 +1,85 @@
+@import "reset";
+@import "animation";
+
+body {
+  background-color: lightblue;
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  text-align: center;
+  padding: 5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+.container {
+  display: grid;
+  width: 1400px;
+  margin: 180px auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+.outer-box {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed black;
+  background-color: rgb(201, 197, 197);
+  padding: 2rem;
+}
+.inner-box {
+  width: 200px;
+  height: 200px;
+  background-color: bisque;
+  text-align: center;
+  &:hover {
+    animation: spin 5s linear  infinite;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(20deg);
+    transform-origin: left top;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.inner-box {
+  transform: rotate(20deg);
+}
+.inner-box2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(243, 180, 103);
+  text-align: center;
+  &:hover {
+    animation: spin1 5s ease-in  3;
+  }
+}
+@keyframes spin1 {
+  0% {
+    transform: rotate(-20deg) scale(0.5);
+    transform-origin: right bottom;
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.75);
+  }
+}
+.inner-box3 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(238, 141, 22);
+  text-align: center;
+  &:hover {
+    animation: spin2 5s ease-in-out  3;
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg) translate(-100px);
+    transform-origin: left bottom;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

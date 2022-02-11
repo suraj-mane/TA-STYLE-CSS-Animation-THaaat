@@ -1,0 +1,55 @@
+.outer-box1 {
+  height: 200px;
+  width: 200px;
+  border: 2px solid grey;
+  background-color: beige;
+  padding: 2rem;
+}
+.inner-box1-1 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(99, 99, 136);
+  &:hover {
+    animation: sin 5s ease-in-out 3;
+  }
+}
+@keyframes sin {
+  0% {
+    transform: perspective(80px) rotateX(20deg);
+  }
+  100% {
+    transform: perspective(20px) rotateX(360deg);
+  }
+}
+.inner-box1-2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(99, 99, 136);
+  &:hover {
+    animation: sin1 5s ease-in-out 3;
+  }
+}
+@keyframes sin1 {
+  0% {
+    transform: perspective(50px) rotateY(20deg);
+  }
+  100% {
+    transform: perspective(80px) rotateY(360deg);
+  }
+}
+.inner-box1-3 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(99, 99, 136);
+  &:hover {
+    animation: sin 5s ease-in-out 3;
+  }
+}
+@keyframes sin {
+  0% {
+    transform: perspective(10px) rotate(20deg);
+  }
+  100% {
+    transform: perspective(20px) rotate(360deg);
+  }
+}
